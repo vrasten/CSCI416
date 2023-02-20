@@ -36,6 +36,9 @@ main h2 {
 footer {
 	background-color:darkblue;
 	color:azure;
+	font-style: italic;
+	text-align: center;
+	font-size: 75%;
 }
 .namebutton{
 	text-align:center
