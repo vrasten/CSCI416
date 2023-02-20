@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+header {
+	background-color:azure;
+	color:darkblue;
+	font-family:arial, sans serif;
+	border:solid 3px darkblue;
+}
+nav {
+	background-color:darkblue;
+}
+nav p {
+	border:solid 3px azure;
+	background-color:darkblue;
+	font-weight:bold;
+	color:azure;
+	display:inline-block;
+	width:17%;
+	min-width:85px;
+	text-align:center;
+	margin-left:3px;
+}
+nav p a {
+	color:azure;
+	text-decoration:none;
+}
+main {
+	background-color:azure;
+}
+main h1, main h2, main h3 {
+	font-family:arial, sans serif;
+	}
+main h2 {
+	text-align:center
+}
+footer {
+	background-color:darkblue;
+	color:azure;
+}
+.namebutton{
+	text-align:center
+}
