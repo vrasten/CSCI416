@@ -43,3 +43,6 @@ footer {
 .whatever4{
 	display:flex;
 }
+.bulletclass{
+  list-style: url("sr-bullet.jpg");
+}
