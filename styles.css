@@ -1,19 +1,23 @@
 @charset "utf-8";
 /* CSS Document */
+:root {
+	--my-dark-color: #00008b;
+	--my-light-color: #f0ffff;
+  }
 header {
-	background-color:azure;
-	color:darkblue;
+	background-color:var(--my-light-color);
+	color:var(--my-dark-color);
 	font-family:arial, sans serif;
-	border:solid 3px darkblue;
+	border:solid 3px var(--my-dark-color);
 }
 nav {
-	background-color:darkblue;
+	background-color:var(--my-dark-color);
 }
 nav p {
-	border:solid 3px azure;
-	background-color:darkblue;
+	border:solid 3px var(--my-light-color);
+	background-color:var(--my-dark-color);
 	font-weight:bold;
-	color:azure;
+	color:var(--my-light-color);
 	display:inline-block;
 	width:17%;
 	min-width:85px;
@@ -21,11 +25,11 @@ nav p {
 	margin-left:3px;
 }
 nav p a {
-	color:azure;
+	color:var(--my-light-color);
 	text-decoration:none;
 }
 main {
-	background-color:azure;
+	background-color:var(--my-light-color);
 }
 main h1, main h2, main h3 {
 	font-family:arial, sans serif;
@@ -34,8 +38,8 @@ main h2 {
 	text-align:center
 }
 footer {
-	background-color:darkblue;
-	color:azure;
+	background-color:var(--my-dark-color);
+	color:var(--my-light-color);
 	font-style: italic;
 	text-align: center;
 	font-size: 75%;
