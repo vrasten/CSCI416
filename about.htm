@@ -3,13 +3,19 @@
 <head>
 <meta charset="utf-8">
 <title>Term Project Assignment 2a</title>
-<link href="styles.css" rel="stylesheet">
+<link href="/styles.css" rel="stylesheet">
+<style>
+    image {
+			border-radius: 5px;
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+		}
+</style>
 </head>
 <body>
 	<header>
 	<nav>
 	<p><a href="/index.htm">Home</a></p>
-	<p><a href="/about.htm">About Us</a></p>
+	<p><a href="about.htm">About Us</a></p>
 	<p><a href="data.htm">Data</a></p>
 	<p><a href="#">#</a></p>
 	<p><a href="#">#</a></p>
@@ -17,8 +23,6 @@
 	</header>
 	<main>
 	<img src="https://silkrhodebooks.com/wp-content/uploads/2021/08/silkrhode.jpg" alt="Silk Rhode Books Logo" width="150">
-	<p><a href="/index.htm">Return to Home Page</a></p>
-	<p><a href="https://silkrhodebooks.com">Silk Rhode Books</a></p>
 	<h1>Welcome to Silk Rhode Books</h1>
 	<h2>Our History</h2>
 		<hr>
@@ -39,16 +43,13 @@
 		-->
 	<h3>This is the About Us page of my site</h3>
 	</main>
-	<footer>
-		<p>Footer coming soon</p>
-	</footer>
 	<script>
 		console.log("loadedjavascript")
 		function showJason(){
 			console.log("gothere")
 			const header="Jason Pagano"
 			const body="author of 'Across the Sun', owner of Silk Rhode Books"
-			const imgsrc="https://raw.githubusercontent.com/vrasten/CSCI416/4eaca608a10a5fd0575c5d0df5e23b60f475793a/sr-hardcover.png"
+			const imgsrc="https://raw.githubusercontent.com/vrasten/CSCI416/main/images/sr-hardcover.png"
 			document.getElementById("whatever1").innerText=header
 			document.getElementById("whatever2").setAttribute("src",imgsrc)
 			document.getElementById("whatever2").setAttribute("width",100)
@@ -57,7 +58,7 @@
 		function showPatricia(){
 			const header="Patricia Cousineau"
 			const body="author of 'Lydia Loves to Look at the Stars'"
-			const imgsrc="https://raw.githubusercontent.com/vrasten/CSCI416/4eaca608a10a5fd0575c5d0df5e23b60f475793a/sr-paperback.png"
+			const imgsrc="https://raw.githubusercontent.com/vrasten/CSCI416/main/images/sr-paperback.png"
 			document.getElementById("whatever1").innerText=header
 			document.getElementById("whatever2").setAttribute("src",imgsrc)
 			document.getElementById("whatever2").setAttribute("width",100)
