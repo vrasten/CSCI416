@@ -22,9 +22,21 @@
       color: azure;
 		padding:5px 10px;
     }
+		main {
+			width: 800px;
+			margin-left: auto;
+			margin-right: auto;
+    }
+    body {
+      background-image: url("images/bg.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
 	</style>
 </head>
 <body>
+  <main>
 	<header>
 	<nav>
 	<p><a href="/index.htm">Home</a></p>
@@ -52,44 +64,120 @@
     <th>Version</th>
   </tr>
   <tr>
-    <td>Across the Sun</td>
+    <td id="title1">Across the Sun (Hardcover)</td>
     <td>Jason Pagano & Bill Robinson</td>
-    <td>2021</td>
+    <td id="date1">2019</td>
     <td>First</td>
     <td>Hardcover</td>
   </tr>
   <tr>
-    <td>Across the Sun</td>
+    <td id="title2">Across the Sun (Paperback)</td>
     <td>Jason Pagano & Bill Robinson</td>
-    <td>2021</td>
+    <td id="date2">2020</td>
     <td>First</td>
     <td>Paperback</td>
   </tr>
   <tr>
-    <td>Across the Sun</td>
+    <td id="title3">Across the Sun (Kindle)</td>
     <td>Jason Pagano & Bill Robinson</td>
-    <td>2021</td>
+    <td id="date3">2021</td>
     <td>First</td>
     <td>Kindle</td>
   </tr>
   <tr>
-    <td>Lydia Loves to Look at the Stars</td>
+    <td id="title4">Lydia Loves to Look at the Stars</td>
     <td>Patricia Cousineau</td>
-    <td>2022</td>
+    <td id="date4">2022</td>
     <td>First</td>
     <td>Hardcover</td>
   </tr>
   <tr>
-    <td>Strata Fables</td>
+    <td id="title5">Strata Fables</td>
     <td>Jason Pagano</td>
-    <td>2023</td>
+    <td id="date5">2023</td>
     <td>Upcoming</td>
     <td>Hardcover</td>
   </tr>
 </table>
 
+<label for="myinput">Search by publication year</label>
+<input type="text" id="myinput">
+<button onclick="searchdates()">Find</button>
+<div id="resultsheader" style="display:none; color:blue; border:solid 2px blue; padding-left: 15px;">
+  <h3>Search Results</h3>
+</div>
+<div id="noresults" style="display:none; color:red;">
+  <h3>No Results Found</h3>
+</div>
+<div id="results">
+
+</div>
 </body>
 	<footer>
 		<p>Site copyright &copy 2023 by Jason Pagano</p>
 	</footer>
+</main>
+<script>
+  var date1 = document.getElementById("date1");
+  var date2 = document.getElementById("date2");
+  var date3 = document.getElementById("date3");
+  var date4 = document.getElementById("date4");
+  var date5 = document.getElementById("date5");
+  var input = document.getElementById("myinput");
+  var results = document.getElementById("results");
+
+  var resultsheader = document.getElementById("resultsheader");
+  var noresults = document.getElementById("noresults");
+
+  function searchdates(){
+    resultsheader.style.display = "none";
+    noresults.style.display = "none";
+    var found=false;
+
+    results.innerHTML = ("")
+  if (date1.innerText == input.value){
+    var title1 = document.getElementById("title1").innerText;
+    var result = document.createElement("p");
+    result.innerText = title1;
+    results.appendChild(result);
+    resultsheader.style.display = "block";
+    found = true
+    }
+  if (date2.innerText == input.value){
+    var title2 = document.getElementById("title2").innerText;
+    var result = document.createElement("p");
+    result.innerText = title2;
+    results.appendChild(result);
+    resultsheader.style.display = "block";
+    found = true
+    }
+  if (date3.innerText == input.value){
+    var title3 = document.getElementById("title3").innerText;
+    var result = document.createElement("p");
+    result.innerText = title3;
+    results.appendChild(result);
+    resultsheader.style.display = "block";
+    found = true
+    }
+  if (date4.innerText == input.value){
+    var title4 = document.getElementById("title4").innerText;
+    var result = document.createElement("p");
+    result.innerText = title4;
+    results.appendChild(result);
+    resultsheader.style.display = "block";
+    found = true
+    }
+  if (date5.innerText == input.value){
+    var title5 = document.getElementById("title5").innerText;
+    var result = document.createElement("p");
+    result.innerText = title5;
+    results.appendChild(result);
+    resultsheader.style.display = "block";
+    found = true
+    }
+  if (found == false){
+    noresults.style.display = "block";
+  }
+  }
+</script>
 </html>
