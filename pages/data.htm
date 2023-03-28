@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Data</title>
-<link href="/styles.css" rel="stylesheet">
+<link href="../styles.css" rel="stylesheet">
 	<style>
     .tablestyle {
       font-family: Arial Verdana sans-serif;
@@ -14,24 +14,25 @@
       background-color: azure;
       border: 1px solid darkblue;
       color: darkblue;
-		padding:5px 10px;
-		min-width: 10vw;
+      padding:10px;
+	  	min-width: 10vw;
     }
     .tablestyle th {
       background-color: darkblue;
       color: azure;
-		padding:5px 10px;
+      padding:10px;
     }
 		main {
-			width: 800px;
+      padding: 8px;
+			width: 100vw;
 			margin-left: auto;
 			margin-right: auto;
-    }
-    body {
-      background-image: url("images/bg.jpg");
+      background-image: url("../images/bg.jpg");
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
+    }
+    body {
     }
 	</style>
 </head>
@@ -39,23 +40,21 @@
   <main>
 	<header>
 	<nav>
-	<p><a href="/index.htm">Home</a></p>
+	<p><a href="../index.htm">Home</a></p>
 	<p><a href="about.htm">About Us</a></p>
 	<p><a href="data.htm">Data</a></p>
-	<p><a href="#">#</a></p>
+	<p><a href="join.htm">Join</a></p>
 	<p><a href="#">#</a></p>
 	</nav>
 	</header>
-	<main>
-	</main>
-	<h1>Some Information About Upcoming Books</h1>
+	<h1 style="text-align: center;">Some Information About Upcoming Books</h1>
 	<ul class="bulletclass">
   		<li>Strata Fables</li>
   		<li>Within the Streams</li>
- 		<li>Tsunami Mixtape</li>
- 		<li>Anchorfolk</li>
+ 		  <li>Tsunami Mixtape</li>
+ 		  <li>Anchorfolk</li>
 	</ul>
-<table class="tablestyle">
+<table class="tablestyle" align="center">
   <tr>
     <th>Book Title</th>
     <th>Author</th>
@@ -99,7 +98,6 @@
     <td>Hardcover</td>
   </tr>
 </table>
-
 <label for="myinput">Search by publication year</label>
 <input type="text" id="myinput">
 <button onclick="searchdates()">Find</button>
@@ -110,13 +108,12 @@
   <h3>No Results Found</h3>
 </div>
 <div id="results">
-
 </div>
-</body>
 	<footer>
 		<p>Site copyright &copy 2023 by Jason Pagano</p>
 	</footer>
 </main>
+</body>
 <script>
   var date1 = document.getElementById("date1");
   var date2 = document.getElementById("date2");
