@@ -52,4 +52,5 @@ footer {
 }
 .bulletclass{
   list-style: url("images/sr-bullet.png");
+  margin-left: 20px;
 }
