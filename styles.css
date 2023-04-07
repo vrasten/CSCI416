@@ -12,6 +12,8 @@ header {
 }
 nav {
 	background-color:var(--my-dark-color);
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;	
 }
 nav p {
 	border:solid 3px var(--my-light-color);
@@ -30,6 +32,7 @@ nav p a {
 }
 main {
 	background-color:var(--my-light-color);
+	width:100vw;
 }
 main h1, main h2, main h3 {
 	font-family:arial, sans serif;
@@ -53,4 +56,27 @@ footer {
 .bulletclass{
   list-style: url("images/sr-bullet.png");
   margin-left: 20px;
+}
+.carousel{
+	display:grid;
+	grid-auto-flow: dense;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 15px;
+}
+.donut{
+	box-shadow: 5px 5px 5px lightgrey;
+}
+.donutlady{
+	color: white;
+	position: absolute;
+}
+.bookcaption{
+	color: magenta;
+	position: absolute;
+}
+.donutgrid{
+	display:grid;
+	min-height:100vh;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
 }
