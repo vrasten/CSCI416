@@ -54,6 +54,18 @@
  		  <li>Tsunami Mixtape</li>
  		  <li>Anchorfolk</li>
 	</ul>
+  <div>
+    <label for="colorNumber">Enter color number:</label>
+    <input type="number" id="colorNumber" name="colorNumber" min="1">
+    <button onclick="findColor()">Find a color</button>
+    
+    <label for="result">Color name:</label>
+    <input type="text" id="result" name="result" readonly>
+  
+      <button onclick="addColor()">Add a Color</button>
+      <button onclick="removeColor()">Remove a Color</button>
+      <br>
+  </div>
 <table class="tablestyle" align="center">
   <tr>
     <th>Book Title</th>
@@ -176,5 +188,36 @@
     noresults.style.display = "block";
   }
   }
+  const colors = ['null','red', 'orange', 'yellow', 'green', 'blue', 'purple'];
+        function testInput() {
+			var num = document.getElementById("numberInput").value;
+			do {
+				if(isNaN(num)) {
+					alert("Please enter a number.");
+					return;
+				}
+			} while(isNaN(num));
+			alert("Thank you");
+		}
+		function findColor() {
+			const inputField = document.getElementById('colorNumber');
+			const colorNumber = parseInt(inputField.value);
+			if (colorNumber >= 1 && colorNumber < colors.length) {
+				const colorName = colors[colorNumber];
+				const resultField = document.getElementById('result');
+				resultField.value = colorName;
+			} else {
+				alert('Please enter a number between 1 and 6.');
+			}
+        
+		}
+        function addColor() {
+        const color = prompt("give me a color");
+        colors.push(color);
+    }
+    function removeColor() {
+        const color = prompt("give me a color number");
+        colors.splice(color,1);
+    }
 </script>
 </html>
