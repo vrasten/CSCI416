@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Term Project Assignment 2a</title>
+<link href="../styles.css" rel="stylesheet">
+<style>
+    image {
+			border-radius: 5px;
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+		}
+    main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        min-height: 100px;
+        background-color: azure;
+      }
+    div {
+        background-color: #00008b;
+        color: azure;
+        height: 50px;
+        width: 50px;
+    }
+    .shapelist li::marker {
+        color: red;
+    }
+    #div02 {
+        transform:translateX(10px) translateY(10px)
+    }
+    #div03 {
+        transform:rotate(60deg);
+        transform-origin: top left;
+    }
+    #div04 {
+        transform:scaleX(200%);
+        transform-origin: top left;
+    }
+    #div05 {
+        transform:skewX(-45deg);
+        transform-origin:bottom left;
+    }
+</style>
+</head>
+<body>
+	<header>
+	<nav>
+	<p><a href="../index.htm">Home</a></p>
+	<p><a href="about.htm">About Us</a></p>
+	<p><a href="data.htm">Data</a></p>
+	<p><a href="join.htm">Join</a></p>
+	<p><a href="shapes.htm">Shapes</a></p>
+	</nav>
+	</header>
+    <main>
+     <section>
+        <div id="div01">1</div>
+     </section>
+     <section>
+        <div id="div02">2</div>
+     </section>
+     <section>
+        <div id="div03">3</div>
+     </section>
+     <section>
+        <div id="div04">4</div>
+     </section>
+     <section>
+        <div id="div05">5</div>
+     </section>
+    </main>
+	<ol class="shapelist">
+        <li>No Change</li>
+        <li>transform:translateX(10px) translateY(10px)</li>
+        <li>transform:rotate(60deg); transform-origin: top left;</li>
+        <li>transform:scaleX(200%); transform-origin: top left;</li>
+        <li>transform:skewX(-45deg); transform-origin:bottom left;</li>
+    </ol>
+	<footer>
+	<p>Site copyright &copy 2023 by Jason Pagano</p>
+	</footer>
+	</body>
+</html>
