@@ -30,6 +30,10 @@ nav p a {
 	color:var(--my-light-color);
 	text-decoration:none;
 }
+nav p:hover {
+  border-color: var(--my-dark-color);
+  font-style: italic;
+}
 main {
 	background-color:var(--my-light-color);
 	width:100vw;
@@ -80,3 +84,4 @@ footer {
 	grid-template-columns: 1fr;
 	grid-template-rows: auto;
 }
+
