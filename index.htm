@@ -4,6 +4,56 @@
 <meta charset="utf-8">
 <title>Term Project Assignment 2a</title>
 <link href="styles.css" rel="stylesheet">
+<style>
+	.grid-container {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 20px;
+		}
+		article {
+			background-color: azure;
+			padding: 20px;
+			border: 1px solid #00008b;
+			box-shadow: 5px 5px 5px lightgrey;
+		}
+	.main-image {
+		float:left;
+	}
+	.par-image {
+		float:left;
+	}
+			article p:first-of-type::first-line{
+			font-size: 1.2em;
+			text-transform: uppercase;
+		}
+		article p:first-of-type::first-letter {
+			font-weight: bold;
+			color: red;
+		}
+	@media screen and (max-width: 600px) {
+		.main-image {
+			float:none;
+			text-align: center;
+		}
+		nav {
+			display:block;
+		}
+		nav p {
+			width: 100%;
+		}
+	}
+		@media screen and (max-width: 800px) {
+			.grid-container {
+				grid-template-columns: 1fr;
+			}
+		}
+		@container (max-width:500px) {
+			/*this isn't compatible with Firefox or Safari*/
+			.par-image {
+				float:right;
+			}
+		}
+</style>
 </head>
 <body>
 	<header>
@@ -16,22 +66,41 @@
 	</nav>
 	</header>
 	<main>
+	<div class="main-image">
 	<img src="https://silkrhodebooks.com/wp-content/uploads/2021/08/silkrhode.jpg" alt="Silk Rhode Books Logo" width="150">
+	</div>
 	<h1>Welcome to Silk Rhode Books</h1>
-	<article>
-	<section>
+	<div class="grid-container">
+	<article id="swap1">
 		<h2>This is the homemade version of the website.</h2>
-		<p>Also, it's an assignment for CSCI 416.</p>
-	</section>
-	<section>
-		<h2>There is a real version of the Silk Rhode Books website.</h2>
-		<p>Some links to the real website are included above.</p>
-		<p>Other links listed above will navigate to other areas of this CSCI project.</p>
-	</section>
+		<div class="par-image">
+		<img src="images/sr-bullet.png" width="100px" height="100px">
+		</div>
+		<p>Also, it's an assignment for CSCI 416. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod nisl non ipsum lobortis.</p>
 	</article>
+	<article id="swap2">
+		<h2>There is a real version of the Silk Rhode Books website.</h2>
+		<div class="par-image">
+		<img src="images/sr-bullet.png" width="100px" height="100px">
+		</div>
+		<p>Other links listed above will navigate to other areas of this project. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod nisl non ipsum lobortis.</p>
+		<p>Click here to visit the actual <a href="http://www.silkrhodebooks.com">Silk Rhode Books website.</a></p>
+	</article>
+	</div>
+	<button onclick="swap()">Swap Articles</button>
 	</main>
 	<footer>
 		<p>Site copyright &copy 2023 by Jason Pagano</p>
 	</footer>
 </body>
+<script>
+	var swap1=document.getElementById("swap1");
+	var swap2=document.getElementById("swap2");
+	function swap(){
+		var swap1content=swap1.innerHTML;
+		var swap2content=swap2.innerHTML;
+		swap1.innerHTML=swap2content;
+		swap2.innerHTML=swap1content;
+	}
+</script>
 </html>
